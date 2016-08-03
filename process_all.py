@@ -15,7 +15,7 @@ def process_all(dl_dir,subreddits,n_jobs=8):
     ARGS:
         dl_dir: string.
             path to directory containing zipped files.
-        subreddits: list or set.
+        subreddits: iterable.
             list of strings storing the target subreddit names.
             passed to `read_json.process`.
     """
@@ -31,7 +31,7 @@ def download_set(files):
     """download all of the files specified in the input.
 
     ARGS:
-        files: set or list.
+        files: iterable.
             set or list of filenames as output by `get_files.list_files`.
             list allows for downloading subsets.
     """
@@ -51,7 +51,7 @@ def run_all(subreddits,n=10,n_jobs=8):
     to free up space).
 
     ARGS:
-        subreddits: list or set.
+        subreddits: iterable.
             list of strings storing target subreddit names.  
             passed to `read_json.process`.
 
@@ -67,10 +67,12 @@ def run_all(subreddits,n=10,n_jobs=8):
     files = g.restrict_files_to_dir(files,
                                     '/Users/john/python/reddit_scraper/raw/')
     groups = grouper(n,files)
+    n_groups = len(groups)
 
     print("running {} targets in batches of {}\n".format(len(files),n))
 
-    for group in groups:
+    for i,group in enumerate(groups):
+        print("group {} of {}".format(i+1,n_groups))
         group = [file for file in group if file is not None]
         download_set(group)
         process_all('raw',subreddits,n_jobs=n_jobs)

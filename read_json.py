@@ -17,13 +17,15 @@ def process_zip(filepath,subreddits):
     ARGS:
         filepath: string.
             path to zipped file to be processed.
-        subreddits: list.
+        subreddits: iterable.
             list of strings containing names of target subreddits to be saved.
     """
     entries_read = 0
     entries_saved = 0
     writefilepath = (filepath.split('.')[0]+'_scraped_{}'
                      .format(dt.datetime.now()))
+
+    subreddits = set([sub.lower() for sub in subreddits])
 
     try:
         start = dt.datetime.now()
@@ -33,7 +35,7 @@ def process_zip(filepath,subreddits):
                     data = json.loads(line.decode())
                     entries_read += 1
 
-                    sub = data.get('subreddit',None)
+                    sub = data.get('subreddit','').lower()
                     if sub in subreddits:
                         entries_saved += 1
                         json.dump(data,writefile)

@@ -87,3 +87,8 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Raw files
+.bz2
+RC*
+RS*

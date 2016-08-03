@@ -50,9 +50,9 @@ def restrict_files(subreddits,files):
     than the earliest date from the file list to save download time.
 
     ARGS:
-        subreddits: list.
+        subreddits: iterable.
             list of strings containing subreddit names.
-        files: set.
+        files: iterable.
             iterable containing the names of the files to download.
     """
     conn = pms.connect(host='localhost',
