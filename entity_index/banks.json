@@ -1,25 +1,12 @@
 {
-    "banks": {
-        "CHASE": {
-            "alts": []
-        },
-        "CITI": {
-            "alts": ["CITIBANK"]
-        },
-        "AMEX": {
-            "alts": ["AMERICAN EXPRESS"]
-        },
-        "BOA": {
-            "alts": ["BANK OF AMERICA","BOFA"]
-        },
-        "CAPONE": {
-            "alts": ["CAPITAL ONE"]
-        },
-        "DISCOVER": {
-            "alts": []
-        },
-        "BARCLAY": {
-            "alts": ["BARCLAYS","BARCLAYCARD","BARCLAYSUS"]
-        }
-    }
+    "banks": [
+        {"name": "CHASE","alts":["CSP"]},
+        {"name":"CITI","alts": ["CITIBANK"]},
+        {"name":"AMEX","alts": ["AMERICAN EXPRESS"]},
+        {"name":"BOA","alts": ["BANK OF AMERICA","BOFA"]},
+        {"name":"CAPONE","alts": ["CAPITAL ONE"]},
+        {"name":"DISCOVER"},
+        {"name":"BARCLAYS","alts": ["BARCLAY","BARCLAYCARD","BARCLAYSUS"]},
+        {"name":"VISA"}
+    ]
 }

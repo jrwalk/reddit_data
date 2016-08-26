@@ -1,0 +1,52 @@
+{
+    "issuer": [
+        {"name":"CHASE","cards:":[
+            {"name":"FREEDOM"},
+            {"name":"SAPPHIRE","alts":["CSP","SAPPHIRE PREFERRED"]},
+            {"name":"SLATE"},
+            {"name":"INK"}
+        ]},
+        {"name":"CITI","cards":[
+            {"name":"DOUBLECASH","alts":["DOUBLE CASH","CDC","DC"]},
+            {"name":"SIMPLICITY"},
+            {"name":"DIAMOND","alts":["DIAMOND PREFERRED"]},
+            {"name":"AADVANTAGE"},
+            {"name":"COSTCO"}
+        ]},
+        {"name":"AMEX","cards":[
+            {"name":"GREEN"},
+            {"name":"GOLD"},
+            {"name":"PLATINUM"},
+            {"name":"BUSINESS GOLD"},
+            {"name":"BUSINESS PLATINUM"},
+            {"name":"OPEN"},
+            {"name":"PREMIER REWARDS","alts":["PRG","PREMIER REWARDS GOLD"]}
+        ]},
+        {"name":"BOA","cards":[
+            {"name":"BANKAMERICARD","alts":["CASH REWARDS"]}
+        ]},
+        {"name":"VISA","cards":[
+            {"name":"SIGNATURE"},
+            {"name":"INFINITE"}
+        ]},
+        {"name":"CAPONE","cards":[
+            {"name":"QUICKSILVER","alts":["QUICK SILVER"]},
+            {"name":"PLATINUM"},
+            {"name":"JOURNEY"},
+            {"name":"VENTUREONE","alts":["VENTURE ONE"]},
+            {"name":"SPARK"},
+            {"name":"VENTURE"},
+            {"name":"SECURED"}
+        ]},
+        {"name":"DISCOVER","cards":[
+            {"name":"CARD"},
+            {"name":"IT"},
+            {"name":"MILES"}
+        ]},
+        {"name":"BARCLAYS","cards":[
+            {"name":"ARRIVAL"},
+            {"name":"ARRIVALPLUS","alts":["ARRIVAL PLUS"]},
+            {"name":"REWARDS","alts":["REWARDS MASTERCARD"]}
+        ]}
+    ]
+}
