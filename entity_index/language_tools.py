@@ -51,6 +51,9 @@ def multi_word_entities():
     with open('cards.json','r') as f:
         cards = json.load(f)
 
+    with open('keywords.json','r') as f:
+        other = json.load(f)
+
     # include keywords.json here
 
     MWE = []
@@ -92,6 +95,21 @@ def multi_word_entities():
                                 newname = ian.split() + name
                                 MWE.append(tuple(newname))
 
+    # process other keywords
+    for tag in other['keywords']:
+        tagname = tag['tag']
+        for term in tag['terms']:
+            if tagname != '':
+                MWE.append((term['term'],tagname))
+            alts = term.get('alts',None)
+            if alts is not None:
+                for alt in alts:
+                    alt = alt.split()
+                    if tagname != '':
+                        MWE.append(tuple(alt + [tagname]))
+                    if len(alt) > 1:
+                        MWE.append(tuple(alt))
+
     return MWE
 
 
@@ -113,7 +131,8 @@ def tokenize(text,lemma=False,stopwords=None):
             List of upper-case tokens, represented as strings.
     """
     tokens = nltk.RegexpTokenizer(r'\w+').tokenize(text.upper())
-    tokens = nltk.MWETokenizer(mwes=multi_word_entities(),separator=' ').tokenize(tokens)
+    tokens = nltk.MWETokenizer(mwes=multi_word_entities(),
+                               separator=' ').tokenize(tokens)
 
     if stopwords is not None:
         tokens = [word for word in tokens if word not in stopwords]

@@ -69,6 +69,9 @@ def build_keywords():
     with open('cards.json','r') as f:
         cards = json.load(f)['issuer']
 
+    with open('keywords.json','r') as f:
+        other = json.load(f)['keywords']
+
     keywords = []
 
     for bank in banks:
@@ -84,6 +87,13 @@ def build_keywords():
             if alts is not None:
                 keywords += alts
 
+    for tag in other:
+        for term in tag['terms']:
+            keywords.append(term['term'])
+            alts = term.get('alts',None)
+            if alts is not None:
+                keywords += alts
+
     for mwe in lt.multi_word_entities():
         term = ' '.join(mwe)
         keywords.append(term)
@@ -92,7 +102,8 @@ def build_keywords():
 
     # hack -- remove common single-word entities to avoid false positives
     removals = ['CARD','DC','FREEDOM','GOLD','GREEN','INFINITE','IT','OPEN',
-                'SECURED','JOURNEY','SPARK']
+                'JOURNEY','SPARK','AF FEE','INTEREST INTEREST',
+                'GRACE PERIOD FEE','MINIMUM PAYMENT PAYMENT']
     keywords.difference_update(set(removals))
 
     return keywords

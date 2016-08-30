@@ -12,14 +12,14 @@
                 {"term":"FOREIGN","alts":["FOREIGN TRANSACTION"]},
                 {"term":"ADVANCE","alts":["CASH ADVANCE"]},
                 {"term":"LATE","alts":["LATE PAYMENT","GRACE PERIOD"]},
-                {"term":"ANNUAL","alts":["AF","ANNUAL FEE"]},
-                {"term":"BALANCE","alts":["BALANCE TRANSFER","BALANCE TRANSFER FEE"]}
+                {"term":"ANNUAL","alts":["AF"]},
+                {"term":"BALANCE","alts":["BALANCE TRANSFER"]}
             ]
         },
         {"tag":"INTEREST",
             "terms":[
                 {"term":"APR","alts":["ANNUAL PERCENTAGE RATE"]},
-                {"term":"INTEREST","alts":["FIXED RATE","VARIABLE RATE","VARIABLE INTEREST"]}
+                {"term":"INTEREST","alts":["FIXED RATE","VARIABLE RATE","VARIABLE"]}
             ]
         },
         {"tag":"PAYMENT",
@@ -28,18 +28,14 @@
                 {"term":"STATEMENT","alts":["STATEMENT BALANCE"]}
             ]
         },
-        {"tag":"USER",
+        {"tag":"",
             "terms":[
                 {"term":"SCORE","alts":["CREDIT SCORE","FICO","VANTAGE","CREDIT HISTORY"]},
                 {"term":"CREDITLINE","alts":["CREDIT LINE","LINE OF CREDIT","LOC","CREDIT LIMIT"]},
-                {"term":"UTILIZATION","alts":["CREDIT UTILIZATION","RATIO"]}
-            ]
-        },
-        {"tag":"OTHER",
-            "terms":[
+                {"term":"UTILIZATION","alts":["CREDIT UTILIZATION","RATIO"]},
                 {"term":"FINCHARGE","alts":["FINANCE CHARGE","MINIMUM FINANCE CHARGE"]},
                 {"term":"SECURITY","alts":["SECURED","UNSECURED"]},
-                {"term":"CARDHOLDER","alts":["ADDITIONAL CARDHOLDER","AUTHORIZED USER"]}
+                {"term":"CARDHOLDER","alts":["ADDITIONAL CARDHOLDER","AUTHORIZED USER"]},
                 {"term":"BALANCELIMIT","alts":["BALANCE TO LIMIT","BALANCE-LIMIT","BALANCE-TO-LIMIT"]}
             ]
         }
