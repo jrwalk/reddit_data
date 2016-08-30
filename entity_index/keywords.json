@@ -1,0 +1,47 @@
+{
+    "keywords":[
+        {"tag":"REWARDS",
+            "terms":[
+                {"term":"CASHBACK","alts":["CASH BACK"]},
+                {"term":"TRAVEL","alts":["HOTEL"]},
+                {"term":"AIRLINE","alts":["MILES","POINTS"]}
+            ]
+        },
+        {"tag":"FEE",
+            "terms":[
+                {"term":"FOREIGN","alts":["FOREIGN TRANSACTION"]},
+                {"term":"ADVANCE","alts":["CASH ADVANCE"]},
+                {"term":"LATE","alts":["LATE PAYMENT","GRACE PERIOD"]},
+                {"term":"ANNUAL","alts":["AF","ANNUAL FEE"]},
+                {"term":"BALANCE","alts":["BALANCE TRANSFER","BALANCE TRANSFER FEE"]}
+            ]
+        },
+        {"tag":"INTEREST",
+            "terms":[
+                {"term":"APR","alts":["ANNUAL PERCENTAGE RATE"]},
+                {"term":"INTEREST","alts":["FIXED RATE","VARIABLE RATE","VARIABLE INTEREST"]}
+            ]
+        },
+        {"tag":"PAYMENT",
+            "terms":[
+                {"term":"MINPAY","alts":["MINIMUM PAYMENT"]},
+                {"term":"STATEMENT","alts":["STATEMENT BALANCE"]}
+            ]
+        },
+        {"tag":"USER",
+            "terms":[
+                {"term":"SCORE","alts":["CREDIT SCORE","FICO","VANTAGE","CREDIT HISTORY"]},
+                {"term":"CREDITLINE","alts":["CREDIT LINE","LINE OF CREDIT","LOC","CREDIT LIMIT"]},
+                {"term":"UTILIZATION","alts":["CREDIT UTILIZATION","RATIO"]}
+            ]
+        },
+        {"tag":"OTHER",
+            "terms":[
+                {"term":"FINCHARGE","alts":["FINANCE CHARGE","MINIMUM FINANCE CHARGE"]},
+                {"term":"SECURITY","alts":["SECURED","UNSECURED"]},
+                {"term":"CARDHOLDER","alts":["ADDITIONAL CARDHOLDER","AUTHORIZED USER"]}
+                {"term":"BALANCELIMIT","alts":["BALANCE TO LIMIT","BALANCE-LIMIT","BALANCE-TO-LIMIT"]}
+            ]
+        }
+    ]
+}

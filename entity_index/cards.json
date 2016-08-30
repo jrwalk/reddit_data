@@ -1,6 +1,6 @@
 {
     "issuer": [
-        {"name":"CHASE","cards:":[
+        {"name":"CHASE","cards":[
             {"name":"FREEDOM"},
             {"name":"SAPPHIRE","alts":["CSP","SAPPHIRE PREFERRED"]},
             {"name":"SLATE"},
@@ -17,8 +17,8 @@
             {"name":"GREEN"},
             {"name":"GOLD"},
             {"name":"PLATINUM"},
-            {"name":"BUSINESS GOLD"},
-            {"name":"BUSINESS PLATINUM"},
+            {"name":"BUSINESSGOLD","alts":["BUSINESS GOLD"]},
+            {"name":"BUSINESSPLATINUM","alts":["BUSINESS PLATINUM"]},
             {"name":"OPEN"},
             {"name":"PREMIER REWARDS","alts":["PRG","PREMIER REWARDS GOLD"]}
         ]},
