@@ -20,7 +20,7 @@
             {"name":"BUSINESSGOLD","alts":["BUSINESS GOLD"]},
             {"name":"BUSINESSPLATINUM","alts":["BUSINESS PLATINUM"]},
             {"name":"OPEN"},
-            {"name":"PREMIER REWARDS","alts":["PRG","PREMIER REWARDS GOLD"]}
+            {"name":"PREMIERREWARDS","alts":["PRG","PREMIER REWARDS","PREMIER REWARDS GOLD"]}
         ]},
         {"name":"BOA","cards":[
             {"name":"BANKAMERICARD","alts":["CASH REWARDS"]}
