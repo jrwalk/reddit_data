@@ -64,6 +64,7 @@ def run_all(subreddits,n=10,n_jobs=8):
     coms,subs = g.list_files()
     files = coms | subs     # merge sets
     files = g.restrict_files(subreddits,files)
+    files = g.restrict_files_to_db(files)
     files = g.restrict_files_to_dir(files,
                                     '/Users/john/python/reddit_scraper/raw/')
     groups = grouper(n,files)

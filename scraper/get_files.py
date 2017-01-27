@@ -104,6 +104,35 @@ def restrict_files_to_dir(files,dl_dir):
     return files.difference(downloaded_files)
 
 
+def restrict_files_to_db(files):
+    """checks for latest date of scraped posts in DB, restricts files to only 
+    non-represented blocks.
+
+    ARGS:
+        files: iterable.
+            iterable containing names of files to download.
+    """
+    conn = pms.connect(host='localhost',
+                       user='root',
+                       passwd='',
+                       db='reddit',
+                       charset='utf8')
+    cur = conn.cursor()
+    query = """SELECT DATE(FROM_UNIXTIME(created_utc)) 
+            FROM Submissions 
+            ORDER BY created_utc DESC 
+            LIMIT 1;
+            """
+    cur.execute(query)
+    lastdate = cur.fetchone()[0]
+
+    subset = files.copy()
+    for file in list(subset):
+        filedate = dt.datetime.strptime(file[5:-4],'%Y-%m').date()
+        if filedate <= lastdate:
+            subset.remove(file)
+    return subset
+
 
 def download(filepathURL):
     """for the given filepath URL, download the target file.
